@@ -1,0 +1,333 @@
+/* Overlay chữ trên slider */
+.home-slider-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	z-index: 3;
+	pointer-events: none;
+	background: rgba(0,0,0,0.18);
+}
+.home-slider-title {
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin-bottom: 18px;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.home-slider-value {
+	font-size: 4.2rem;
+	font-weight: bold;
+	margin-bottom: 18px;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.home-slider-desc {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+/* Slider hình ảnh w1, w2, w3 */
+
+.home-slider-img-wrapper {
+	position: relative;
+	width: 100vw;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: #222;
+	border-radius: 0;
+	box-shadow: none;
+}
+.home-slider-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0;
+	opacity: 0;
+	transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+	z-index: 1;
+}
+
+.gogoro-banner-img {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+.gogoro-banner-img img {
+	width: 520px;
+	max-width: 98vw;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+	background: #fff;
+}
+.gogoro-banner-content {
+	position: absolute;
+	top: 22%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	text-align: center;
+	color: #222;
+	z-index: 2;
+}
+.gogoro-banner-title {
+	font-size: 2.8rem;
+	font-weight: bold;
+	margin-bottom: 18px;
+	text-align: center;
+	color: #222;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.gogoro-banner-desc {
+	font-size: 1.25rem;
+	margin-bottom: 32px;
+	text-align: center;
+	color: #222;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.gogoro-banner-link {
+	margin-bottom: 0;
+	text-align: center;
+}
+.gogoro-banner-btn {
+	display: inline-block;
+	color: #2ad2c9;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.15rem;
+	padding: 12px 32px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s, color 0.2s;
+}
+.gogoro-banner-btn:hover {
+	background: #2ad2c9;
+	color: #fff;
+}
+/* Gogoro Network Banner Section giống demo */
+
+.gogoro-banner-title {
+	font-size: 2.8rem;
+	font-weight: bold;
+	color: #222;
+	margin-bottom: 18px;
+	text-align: center;
+}
+.gogoro-banner-desc {
+	font-size: 1.25rem;
+	color: #222;
+	margin-bottom: 32px;
+	text-align: center;
+}
+.gogoro-banner-link {
+	margin-bottom: 40px;
+	text-align: center;
+}
+.gogoro-banner-btn {
+	display: inline-block;
+	color: #2ad2c9;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.15rem;
+	padding: 12px 32px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s, color 0.2s;
+}
+.gogoro-banner-btn:hover {
+	background: #2ad2c9;
+	color: #fff;
+}
+.gogoro-banner-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 24px;
+}
+.gogoro-banner-img img {
+	width: 1320px;
+	max-width: 100vw;
+}
+/* Ảnh minh họa pin swap Gogoro bên dưới */
+.home-img1-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 32px 0 48px 0;
+}
+.home-img1 {
+	width: 260px;
+	max-width: 80vw;
+	border-radius: 16px;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+	background: #fff;
+}
+.home-img1-large {
+	width: 100vw;
+	max-width: 1300px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+.home-img1-container {
+	width: 100%;
+	margin: 0;
+	margin: 32px 0 0 0;
+}
+.home-img1 {
+	max-width: 700px;
+	width: 100%;
+	height: 100%;
+}
+.latest-news-section {
+	margin: 48px auto 0 auto;
+	max-width: 1400px;
+	padding: 0 24px 48px 24px;
+}
+.latest-news-title {
+	font-size: 2.8rem;
+	font-weight: bold;
+	color: #198dbb;
+	margin-bottom: 32px;
+	margin-left: 40px;
+}
+.latest-news-list {
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.latest-news-card {
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+	overflow: hidden;
+	width: 400px;
+	min-width: 320px;
+	max-width: 440px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 24px;
+}
+.latest-news-img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	display: block;
+}
+.latest-news-meta {
+	font-size: 1.1rem;
+	color: #888;
+	font-weight: 500;
+	margin: 18px 0 8px 24px;
+}
+.latest-news-headline {
+	font-size: 1.35rem;
+	font-weight: 600;
+	color: #222;
+	margin: 0 0 18px 24px;
+	line-height: 1.35;
+}
+.latest-news-link {
+	margin: 0 0 24px 24px;
+	color: #1976d2;
+	font-weight: 500;
+	text-decoration: none;
+	font-size: 1.1rem;
+	transition: color 0.2s;
+}
+.latest-news-link:hover {
+	color: #0d47a1;
+	text-decoration: underline;
+}
+.home-main {
+	padding: 0;
+	margin: 0;
+}
+
+.home-video {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	display: block;
+}
+
+.home-map-section {
+	position: relative;
+	width: 100%;
+}
+
+.home-map-img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.home-map-overlay {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 24px 32px;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+	color: #1976d2;
+	z-index: 2;
+	max-width: 80%;
+
+}
+
+.home-map-desc {
+	font-size: 1rem;
+	font-weight: normal;
+	color: #333;
+	margin-top: 8px;
+}
+
+.home-content-row {
+	display: flex;
+	height: 85vh;
+	gap: 16px;
+	padding: 24px;
+}
+
+.home-content-left {
+	flex: 3;
+}
+
+.home-content-right {
+	flex: 7;
+	height: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.home-error {
+	color: red;
+}
+
+.home-info {
+	color: #1976d2;
+	margin-top: 8px;
+}
+
+

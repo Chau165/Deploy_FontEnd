@@ -1,0 +1,131 @@
+/* admin.css - đồng bộ style với trang driver */
+.admin-dashboard-wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 32px 16px;
+}
+.admin-dashboard-card {
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px rgba(33,150,243,0.10);
+	padding: 28px 24px 24px 24px;
+	margin-bottom: 18px;
+}
+.admin-dashboard-title {
+	font-size: 2rem;
+	font-weight: 800;
+	color: #1976d2;
+	margin-bottom: 8px;
+}
+.admin-dashboard-subtitle {
+	color: #64748b;
+	font-size: 1.08rem;
+	margin-bottom: 18px;
+}
+.admin-dashboard-summary {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap: 18px;
+	margin-bottom: 18px;
+}
+.admin-dashboard-summary-card {
+	background: #f7fafc;
+	border-radius: 12px;
+	padding: 18px;
+	box-shadow: 0 1px 4px rgba(33,150,243,0.04);
+}
+/* Dashboard tab style giống TabBar driver */
+.admin-dashboard-tabs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	justify-content: center;
+	background: #f7f8fa;
+	border-radius: 22px;
+	padding: 3px;
+	margin-bottom: 18px;
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	height: 44px;
+}
+.admin-dashboard-tab-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	height: 38px;
+	width: 100%;
+	font-size: 1.08rem;
+	font-weight: 600;
+	color: #222;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 16px;
+	padding: 0 2px;
+	transition: background 0.18s, color 0.18s;
+	box-shadow: none;
+	position: relative;
+	white-space: nowrap;
+}
+.admin-dashboard-tab-btn.active {
+	background: #e6f2fd;
+	color: #1976d2;
+	z-index: 2;
+	border: none;
+	box-shadow: none;
+}
+.admin-dashboard-tab-btn:not(.active):hover {
+	background: #f0f4fa;
+	color: #1976d2;
+}
+@media (max-width: 900px) {
+	.admin-dashboard-summary {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (max-width: 600px) {
+	.admin-dashboard-wrap {
+		padding: 12px 2vw;
+	}
+	.admin-dashboard-summary {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.admin-dashboard-card {
+		padding: 14px 6px 12px 6px;
+		border-radius: 10px;
+	}
+	.admin-dashboard-title {
+		font-size: 1.2rem;
+	}
+}
+
+/* ====== Hỗ trợ scroll ngang + scrollbar đẹp cho bar chart ====== */
+.simple-bar-wrap {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.simple-bar-wrap::-webkit-scrollbar {
+  height: 8px;
+}
+.simple-bar-wrap::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+.simple-bar-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+.simple-bar-track { min-height: 160px; }
+
+
+/* Ẩn footer chỉ khi đang ở trang AdminDashboard */
+body.no-footer footer,
+body.no-footer .site-footer {
+  display: none !important;
+}

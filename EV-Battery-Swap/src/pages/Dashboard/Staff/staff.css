@@ -1,0 +1,299 @@
+/* ====== LAYOUT CHUNG ====== */
+.staff-dashboard-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: calc(var(--app-header-height, 56px) + 8px) 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ====== HÀNG ẢNH 2 TRỤ ====== */
+.staff-right-panel {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.station-column { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.station-column h3 { margin-top: 12px; font-size: 1.1rem; font-weight: 700; color: #1e293b; letter-spacing: 0.4px; }
+
+/* ====== ẢNH TRỤ ====== */
+.staff-right-image {
+  width: 460px; height: 580px; border-radius: 24px; object-fit: cover;
+  box-shadow: 0 8px 32px rgba(25,118,210,.15), 0 2px 12px rgba(0,0,0,.1);
+  transition: transform .25s, box-shadow .25s; cursor: pointer;
+}
+.staff-right-image:hover { transform: scale(1.05); box-shadow: 0 10px 40px rgba(25,118,210,.25); }
+
+/* ====== THẺ DASHBOARD ====== */
+.staff-dashboard-card {
+  background: #fff; border-radius: 16px; box-shadow: 0 8px 30px rgba(2,6,23,.08);
+  padding: 32px 28px; width: 100%;
+}
+.staff-dashboard-title { font-size: 1.8rem; font-weight: 700; color: #111827; margin-bottom: 6px; }
+.staff-dashboard-subtitle { color: #6b7280; font-size: 1rem; margin-bottom: 20px; }
+
+/* ====== SUMMARY ====== */
+.staff-dashboard-summary { display: flex; gap: 18px; margin-bottom: 18px; }
+.staff-dashboard-summary-card {
+  flex: 1; background: #f7fafc; border-radius: 12px; padding: 18px 10px 14px;
+  text-align: center; box-shadow: 0 1px 4px rgba(33,150,243,.04);
+}
+.staff-dashboard-summary-icon { font-size: 1.7rem; margin-bottom: 4px; }
+.staff-dashboard-summary-value { font-size: 2rem; font-weight: 700; color: #1976d2; }
+.staff-dashboard-summary-label { font-size: 1.1rem; font-weight: 500; color: #222; }
+.staff-dashboard-summary-sub { font-size: .95rem; color: #10b981; }
+
+/* ====== TABS ====== */
+.staff-dashboard-tabs { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 1.5px solid #e5e7eb; }
+.staff-dashboard-tab-btn {
+  background: none; border: none; font-size: 1.05rem; font-weight: 500; color: #64748b;
+  padding: 10px 22px; cursor: pointer; border-radius: 10px 10px 0 0; transition: background .18s, color .18s;
+}
+.staff-dashboard-tab-btn.active { background: #e6f2fd; color: #1976d2; font-weight: 700; }
+
+/* ====== SECTIONS ====== */
+.staff-inventory-section, .staff-transaction-section { margin-top: 18px; }
+.staff-inventory-title, .staff-transaction-title { font-size: 1.15rem; font-weight: 600; color: #222; margin-bottom: 2px; }
+.staff-inventory-desc, .staff-transaction-desc { color: #64748b; font-size: .98rem; margin-bottom: 12px; }
+
+/* ====== TABLE (nếu dùng) ====== */
+.staff-inventory-table-wrap, .staff-transaction-table-wrap { overflow-x: auto; }
+.staff-inventory-table, .staff-transaction-table {
+  width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; font-size: 1rem;
+}
+.staff-inventory-table th, .staff-transaction-table th { background: #f7fafc; color: #1976d2; font-weight: 700; padding: 10px 8px; }
+.staff-inventory-table td, .staff-transaction-table td { padding: 10px 8px; border-bottom: 1px solid #f1f5f9; text-align: center; }
+.staff-inventory-table tr:last-child td, .staff-transaction-table tr:last-child td { border-bottom: none; }
+
+/* ====== BADGE ====== */
+.badge { display: inline-block; padding: 3px 12px; border-radius: 8px; font-size: .98rem; font-weight: 600; color: #fff; }
+.badge-full{ background:#1976d2; } .badge-charging{ background:#f59e42; } .badge-maintain{ background:#ef4444; }
+.badge-return{ background:#64748b; } .badge-receive{ background:#1976d2; }
+
+/* ====== SOH BAR ====== */
+.soh-bar-wrap { display:flex; align-items:center; gap:8px; }
+.soh-bar { height:10px; border-radius:6px; min-width:40px; max-width:80px; transition: width .3s; }
+.soh-label { font-size:.98rem; font-weight:500; color:#222; }
+
+/* ====== BUTTON (chung) ====== */
+.detail-btn {
+  background:#e6f2fd; color:#1976d2; border:none; border-radius:10px; padding:10px 16px; font-weight:700;
+  cursor:pointer; transition: background .18s, color .18s, transform .05s;
+}
+.detail-btn:hover { background:#1976d2; color:#fff; }
+.detail-btn:disabled { opacity:.6; cursor:not-allowed; }
+.action-done{ color:#10b981; font-size:1.3rem; font-weight:700; }
+
+/* ====== MOCKUP TRẠM ====== */
+.station-mockup-minimal{ display:flex; flex-direction:column; align-items:center; margin-bottom:36px; }
+.station-mockup-minimal-inner{
+  width:470px; height:624px; box-sizing:border-box;
+  background: linear-gradient(160deg,#f7fafc 70%,#e0e7ef 100%);
+  border-radius:36px; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  border:4px solid #e5e7eb; padding-top:48px; padding-left:12px; margin-top:0;
+}
+.station-mockup-minimal-screen{ width:120px; height:44px; background:#e5e7eb; border-radius:12px; margin-bottom:18px; box-shadow: inset 0 2px 6px #0000000f; }
+.station-mockup-minimal-grid{
+  display:grid; grid-template-columns: repeat(5,1fr); grid-template-rows: repeat(6,1fr);
+  gap:20px 24px; width:95%; margin:0 auto;
+}
+.station-mockup-minimal-battery{
+  width:48px; height:48px; background:transparent; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition: transform .15s, box-shadow .15s; position:relative; border:none;
+}
+.station-mockup-minimal-battery.empty{ cursor: default; }
+.station-mockup-minimal-battery:hover:not(.empty),
+.station-mockup-minimal-battery.selected:not(.empty){ transform: scale(1.13); z-index:2; }
+.station-mockup-minimal-dot{
+  width:32px; height:32px; border-radius:50%; background:#6be445; display:block; border:2.5px solid #6be445;
+  box-shadow: 0 0 12px 3px #6be44588, 0 2px 8px #b6e4b6; transition: background .18s, box-shadow .18s, border .18s;
+}
+.station-mockup-minimal-battery.empty .station-mockup-minimal-dot{ background:#e5e7eb; border:2px solid #bbb; box-shadow:none; }
+
+/* ====== POPUP & MODAL ====== */
+.station-popup{
+  position:fixed; top:50%; left:50%; transform: translate(-50%,-50%);
+  z-index:9999; background:#fff; border-radius:14px; box-shadow: 0 8px 32px rgba(25,118,210,.13);
+  padding:18px 28px; min-width:260px; max-width: calc(100% - 40px); text-align:left; font-size:1.08rem; color:#222;
+  animation: fadeInPop .18s;
+}
+.station-popup-close{ margin-top:10px; background:#e6f2fd; color:#1976d2; border:none; border-radius:8px; padding:5px 16px; font-weight:600; cursor:pointer; transition: background .18s, color .18s; }
+.station-popup-close:hover{ background:#1976d2; color:#fff; }
+
+.station-modal-backdrop{ position:fixed; inset:0; background: rgba(2,6,23,.45); display:flex; align-items:center; justify-content:center; z-index:9998; }
+.station-modal{ background:transparent; border-radius:16px; padding:20px; max-width:960px; width: calc(100% - 48px); box-sizing:border-box; display:flex; align-items:center; justify-content:center; }
+
+@keyframes fadeInPop { from {opacity:0; transform: translateY(16px);} to {opacity:1; transform: translateY(0);} }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width:1100px){
+  .staff-right-panel{ flex-direction:column; align-items:center; gap:40px; }
+  .staff-right-image{ width:360px; height:460px; }
+  .staff-dashboard-summary{ flex-direction:column; }
+  .staff-dashboard-summary-card{ min-width:180px; }
+}
+@media (max-width:600px){
+  .staff-right-image{ width:280px; height:360px; }
+  .station-column h3{ font-size:1rem; }
+  .staff-dashboard-card{ padding:16px 10px; }
+  .staff-dashboard-title{ font-size:1.35rem; }
+  .staff-inventory-table th, .staff-inventory-table td, .staff-transaction-table th, .staff-transaction-table td{
+    padding: 6px 2px; font-size: .92rem;
+  }
+}
+
+/* ====== CHECK IN BOX ====== */
+.checkin-form{
+  display:flex; align-items:center; gap:12px;
+  background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; width:fit-content;
+  box-shadow:0 4px 14px rgba(2,6,23,.04);
+}
+.checkin-form .input{
+  appearance:none; outline:none; border:1.5px solid #d1d5db; background:#fff; color:#111827; border-radius:10px;
+  padding:10px 14px; min-width:260px; font-size:1rem; line-height:1.25rem; transition: border-color .15s, box-shadow .15s, background .15s;
+}
+.checkin-form .input::placeholder{ color:#94a3b8; }
+.checkin-form .input:focus{ border-color:#1976d2; box-shadow:0 0 0 4px rgba(25,118,210,.15); }
+.checkin-form .input:disabled{ background:#f1f5f9; color:#94a3b8; cursor:not-allowed; }
+.checkin-form .detail-btn{ height:40px; padding:0 16px; border-radius:10px; }
+.checkin-form .detail-btn:disabled{ opacity:.6; cursor:not-allowed; }
+.checkin-hint{ margin-top:8px; font-size:.92rem; color:#64748b; }
+@media (max-width:600px){
+  .checkin-form{ flex-direction:column; align-items:stretch; gap:10px; width:100%; padding:12px; }
+  .checkin-form .input{ min-width:0; width:100%; }
+  .checkin-form .detail-btn{ width:100%; height:42px; }
+}
+
+/* ====== MessageBox (modal) ====== */
+@keyframes mb-backdrop-in { from{opacity:0} to{opacity:1} }
+@keyframes mb-scale-in { 0%{ transform: translateY(8px) scale(.97); opacity:0 } 60%{ transform: translateY(-2px) scale(1.01); opacity:1 } 100%{ transform: translateY(0) scale(1) } }
+@keyframes mb-text-fade { from{opacity:0} to{opacity:1} }
+
+.msgbox-backdrop{
+  position:fixed; inset:0; z-index:1000; background: rgba(15,23,42,.45); backdrop-filter: blur(2px);
+  display:flex; align-items:center; justify-content:center; padding:20px; animation: mb-backdrop-in 120ms ease-out;
+}
+.msgbox{
+  width:min(560px, calc(100% - 40px)); background:#fff; color:#0f172a; border-radius:16px;
+  box-shadow: 0 24px 80px rgba(2,6,23,.25), 0 4px 16px rgba(2,6,23,.12);
+  overflow:hidden; animation: mb-scale-in 180ms cubic-bezier(.2,.9,.2,1);
+}
+.msgbox-header{ display:flex; align-items:center; gap:10px; padding:16px 20px 8px; }
+.msgbox-icon{ font-size:22px; line-height:1; }
+.msgbox-title{ margin:0; font-size:18px; font-weight:800; letter-spacing:.2px; animation: mb-text-fade 200ms ease-out 80ms both; }
+.msgbox-body{ padding:8px 20px 4px; font-size:15px; line-height:1.6; animation: mb-text-fade 220ms ease-out 110ms both; }
+.msgbox-actions{ padding:12px 20px 16px; display:flex; justify-content:flex-end; gap:8px; animation: mb-text-fade 240ms ease-out 130ms both; }
+
+/* Tông màu theo trạng thái */
+.msgbox.success .msgbox-title{ color:#16a34a; }
+.msgbox.error   .msgbox-title{ color:#dc2626; }
+.msgbox.info    .msgbox-title{ color:#0284c7; }
+
+/* Nút trong msgbox (sửa rule bị cắt dở) */
+.msgbox .detail-btn{ border-radius:10px; padding:10px 16px; }
+
+/* =========================================================
+   KHỐI STYLE RIÊNG CHO "TẠO BOOKING" — GỌN GÀNG, DỄ NHÌN
+   ========================================================= */
+.staff-transaction-section {
+  background: #fafbff;                 /* nền rất nhạt để tách với card */
+  border: 1px solid #eef2ff;           /* viền nhẹ */
+  border-radius: 14px;
+  padding: 16px 14px;
+}
+
+.row { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.row-inline { display: flex; align-items: center; gap: 10px; }
+
+.lbl {
+  font-weight: 700; color: #0f172a; letter-spacing: .2px;
+  font-size: 0.98rem;
+}
+
+.hint { color:#64748b; font-size: 12px; margin-top: 4px; }
+.hint.error { color:#ef4444; }
+
+/* Inputs & Selects */
+.input{
+  appearance:none; width:100%;
+  border:1.5px solid #cbd5e1;          /* slate-300 */
+  background:#fff; color:#0f172a; border-radius:12px;
+  padding:11px 14px; font-size:1rem; line-height:1.25rem; outline:none;
+  transition: border-color .15s, box-shadow .15s, background .15s, transform .02s;
+}
+.input:hover { border-color:#94a3b8; }
+.input:focus{ border-color:#1976d2; box-shadow:0 0 0 4px rgba(25,118,210,.15); }
+.input:disabled{ background:#f1f5f9; color:#94a3b8; cursor:not-allowed; }
+.input.error { border-color:#ef4444; box-shadow: 0 0 0 4px rgba(239,68,68,.12); }
+
+/* Select caret */
+select.input{
+  padding-right: 42px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #64748b 50%),
+    linear-gradient(135deg, #64748b 50%, transparent 50%),
+    linear-gradient(#e5e7eb, #e5e7eb);
+  background-position:
+    calc(100% - 22px) calc(50% - 5px),
+    calc(100% - 16px) calc(50% - 5px),
+    calc(100% - 32px) 50%;
+  background-size: 6px 6px, 6px 6px, 1px 20px;
+  background-repeat: no-repeat;
+}
+
+/* Nút phụ "Lấy xe" */
+.btn-secondary{
+  padding: 11px 14px; border-radius: 12px;
+  background:#eef2ff; color:#1e40af; border:1px solid #c7d2fe;
+  font-weight:600; cursor:pointer; transition: transform .05s, box-shadow .2s, background .15s;
+}
+.btn-secondary:hover:not(:disabled){ background:#e0e7ff; box-shadow:0 2px 10px rgba(30,64,175,.15); transform: translateY(-1px); }
+.btn-secondary:disabled{ opacity:.6; cursor: default; }
+
+/* Nút chính thống nhất chiều cao */
+.detail-btn{ height: 42px; min-width: 140px; }
+.row .hint{ margin-left: 8px; }
+
+/* Trạng thái loading inline (áp cho span/hint) */
+.inline-loading{ font-size: 12px; color:#64748b; margin-left: 8px; }
+
+/* Responsive form create */
+@media (max-width:640px){
+  .row-inline{ flex-direction: column; align-items: stretch; gap: 8px; }
+  .btn-secondary, .detail-btn{ width: 100%; }
+}
+
+/* Backdrop riêng cho popup slot */
+.station-popup-backdrop{
+  position: fixed; inset: 0;
+  background: rgba(2,6,23,.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10000;               /* cao hơn modal trụ */
+}
+
+/* Hộp popup */
+.station-popup{
+  background:#fff; color:#222; border-radius:14px;
+  box-shadow: 0 18px 60px rgba(2,6,23,.25), 0 4px 16px rgba(2,6,23,.12);
+  padding:18px 24px; min-width:280px; max-width:min(92vw, 520px);
+  font-size:1.06rem;
+}
+
+/* Giữ modal trụ thấp tầng hơn popup */
+.station-modal-backdrop{ z-index: 9000; }
+
+/* Nút Đóng của modal trụ chỉ hiện khi KHÔNG có overlay con */
+.station-modal-footer{ visibility: visible; }
+.station-modal-backdrop:has(.station-popup-backdrop),
+.station-modal-backdrop:has(.modal-backdrop){
+  /* khi popup slot hoặc selector pin mở thì ẩn footer của modal trụ */
+}
+.station-modal-backdrop:has(.station-popup-backdrop) .station-modal-footer,
+.station-modal-backdrop:has(.modal-backdrop) .station-modal-footer{
+  visibility: hidden;
+}

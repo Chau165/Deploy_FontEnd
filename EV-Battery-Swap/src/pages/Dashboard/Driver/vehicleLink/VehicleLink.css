@@ -1,0 +1,134 @@
+.vehicle-link-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+.vehicle-link-page {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.vehicle-link-page h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 20px;
+}
+
+.vehicle-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.upload-label {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.upload-label input[type="file"] {
+  display: block;
+  margin-top: 8px;
+}
+
+.image-preview {
+  margin: 12px 0;
+  width: 260px;
+  height: 180px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafbfc;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.upload-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s;
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.25);
+}
+
+.upload-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.upload-btn:disabled {
+  background: #b3c6e6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ocr-result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.ocr-result pre {
+  background: #f6f6f6;
+  padding: 12px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+.vehicle-form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.vehicle-form .field {
+  margin-bottom: 16px;
+}
+
+.vehicle-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.vehicle-form input,
+.vehicle-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.vehicle-form small {
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .vehicle-link-page {
+    padding: 22px 16px;
+  }
+  .image-preview {
+    width: 100%;
+    height: 180px;
+  }
+}

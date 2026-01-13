@@ -1,0 +1,475 @@
+
+/* Battery.css - CODE ĐƯỢC CHỈNH SỬA HOÀN CHỈNH */
+
+/* --- Cài đặt cơ bản cho trang --- */
+.battery-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 98vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.hero-content h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  margin: 0;
+  color: white;
+  text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  letter-spacing: -0.02em;
+}
+
+/* Responsive cho Hero Title */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* ===== INTRO SECTION (3 CỘT) ===== */
+.intro-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+}
+
+.intro-section h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  color: #0056d2;
+  margin-bottom: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.intro-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #0056d2 0%, #34d399 100%);
+  border-radius: 2px;
+}
+
+.intro-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro-cards .card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px 25px;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-cards .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #0056d2 0%, #34d399 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.intro-cards .card:hover::before {
+  transform: scaleX(1);
+}
+
+.intro-cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(52, 211, 153, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.intro-cards .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-cards .card:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.intro-cards .card h3 {
+  font-size: 22px;
+  color: #2d3748;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.intro-cards .card p {
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+
+/* ===== PROJECT SECTION - BỐ CỤC ẢNH TRÁI - TEXT PHẢI (40/60) ===== */
+.project-section-single {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.project-section-single h2 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  color: #0056d2;
+  margin-bottom: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.project-section-single h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #0056d2 0%, #34d399 100%);
+  border-radius: 2px;
+}
+
+/* CONTAINER CĂN GIỮA TOÀN BỘ CÁC ITEM */
+.project-card-gogoro {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  /* Khoảng cách giữa các mục */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* CĂN GIỮA */
+}
+
+/* THẺ DỰ ÁN 50/50 */
+.card-item {
+  display: flex;
+  align-items: center;
+  /* QUAN TRỌNG: Căn giữa nội dung dọc theo chiều cao */
+  text-align: left;
+  width: 100%;
+  min-height: 400px;
+  /* Đảm bảo chiều cao tối thiểu để bố cục ổn định */
+}
+
+/* 1. KHU VỰC HÌNH ẢNH (Bên trái) - Tỷ lệ 40% */
+.card-image-wrapper {
+  flex: 0 0 40%;
+  /* THU NHỎ HÌNH LẠI: Chiếm chính xác 40% */
+  max-width: 40%;
+  padding-right: 0px;
+  /* Khoảng cách với chữ */
+  height: 450px;
+  /* Chiều cao cố định để ổn định */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Đảm bảo ảnh lấp đầy khung */
+  display: block;
+}
+
+/* 2. KHU VỰC NỘI DUNG VĂN BẢN (Bên phải) - Tỷ lệ 60% */
+.card-text-content {
+  flex: 0 0 60%;
+  /* ĐẨY CHỮ QUA BÊN PHẢI: Chiếm chính xác 60% */
+  max-width: 60%;
+  padding-left: 60px;
+  /* Khoảng cách với ảnh */
+}
+
+.card-text-content h4 {
+  font-size: 16px;
+  color: #0056d2;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card-text-content h3 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #000;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.card-text-content p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.intro-cards-sumary img {
+  width: 162vh;
+  height: 90vh;
+  object-fit: cover;
+  margin-bottom: 65px;
+
+}
+
+/* ===== Summary banner + 3-column text (match image2) ===== */
+.intro-cards-sumary {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 36px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* banner image: centered, narrower and with shadow */
+.intro-cards-sumary .card-sumary {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.intro-cards-sumary .card-sumary img {
+  display: block;
+  width: 100%;
+  max-width: 1020px;      /* ngang giống mockup */
+  height: auto;
+  margin: 0 auto 34px;   /* khoảng cách dưới ảnh */
+  object-fit: cover;
+  box-shadow: 0 14px 40px rgba(2,6,23,0.08);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* image-swapper: keep layout stable and crossfade two images */
+.image-swapper {
+  display: grid;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto 34px;
+  position: relative;
+  /* set an explicit aspect ratio to avoid layout shift; adjust as needed */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 14px 40px rgba(2,6,23,0.08);
+}
+.image-swapper .swap-img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 650ms ease-in-out;
+}
+.image-swapper .swap-img.visible {
+  opacity: 1;
+}
+
+/* three-column summary text aligned left inside each column */
+.sumary-text-chung {
+  max-width: 1100px;
+  margin: 0 auto 64px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.sumary-text-chung .sumary-text-1 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* heading + paragraph styling to match mockup */
+.sumary-text-chung .sumary-text-1 h3,
+.sumary-text-chung .sumary-text-1 .text {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 6px;
+  text-transform: none;
+  color: #111827;
+}
+
+.sumary-text-chung .sumary-text-1 p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 15px;
+  max-width: 420px; /* giới hạn chiều ngang để xuống dòng đẹp */
+}
+
+/* Responsive: 2 columns then 1 column */
+@media (max-width: 992px) {
+  .sumary-text-chung { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .intro-cards-sumary .card-sumary img { max-width: 640px; margin-bottom: 28px; }
+  .sumary-text-chung .sumary-text-1 p { max-width: 360px; }
+}
+@media (max-width: 640px) {
+  .sumary-text-chung { grid-template-columns: 1fr; padding: 0 12px; gap: 20px; }
+  .intro-cards-sumary .card-sumary img { max-width: 100%; margin: 0 0 20px; border-radius: 10px; }
+  .sumary-text-chung .sumary-text-1 p { max-width: 100%; }
+}
+
+/* Video section */
+.video-section {
+  background: transparent;
+  padding: 36px 12px;
+}
+.video-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 16px;
+}
+.responsive-video {
+  width: 100%;
+  max-width: 1100px;   /* tăng từ 980 -> 1100 */
+  height: auto;
+  max-height: 640px;   /* tăng tối đa tương ứng */
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(2,6,23,0.08);
+  background: #000;
+  outline: none;
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+  .responsive-video { max-width: 720px; max-height: 420px; }
+}
+@media (max-width: 768px) {
+  .responsive-video { max-width: 100%; max-height: 260px; border-radius: 8px; }
+}
+
+/* VIDEO HERO (background video + centered overlay) */
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 840px; /* tăng từ 520 -> 100px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: #03131a;
+}
+
+.video-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 110%;               /* giữ hơi lớn hơn để cover đẹp */
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  transform-origin: center;
+  transform: scale(1.03);     /* nhẹ phóng to để che bớt mép */
+}
+
+/* overlay text - cho rộng hơn một chút */
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  padding: 0 20px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.video-title {
+  margin: 0 0 14px;
+  font-size: clamp(32px, 6.5vw, 64px); /* tăng tối đa */
+  line-height: 1.02;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+}
+
+
+

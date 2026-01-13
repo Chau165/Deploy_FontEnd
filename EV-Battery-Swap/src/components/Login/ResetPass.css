@@ -1,0 +1,77 @@
+/* src/pages/auth/ResetPass.css */
+
+body,
+#root {
+  display: block !important;       /* ❌ tắt flex của index.css */
+  place-items: unset !important;   /* ❌ xóa căn giữa toàn trang */
+  align-items: unset !important;
+  justify-content: unset !important;
+}
+
+#root {
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+
+/* lớp bọc toàn màn hình, luôn căn giữa */
+.auth-center-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7fafc;
+  padding: 16px;        /* để mobile không bị dính mép */
+  box-sizing: border-box;
+}
+
+/* hộp nội dung */
+.card-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.card-box h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #1976d2;
+}
+
+.card-box p { color: #444; margin-bottom: 18px; }
+
+/* form dọc */
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-col input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-col button {
+  background: linear-gradient(90deg, #10B981, #34D399);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-col button:hover {
+  background: linear-gradient(90deg, #34D399, #10B981);
+}
+
+.success-msg { color: #10B981; font-weight: 600; font-size: 1.05rem; }
+.error-msg { color: #dc2626; font-size: 0.95rem; }

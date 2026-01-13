@@ -1,0 +1,86 @@
+.userinfo-container {
+  max-width: 480px;
+  margin: 48px auto;
+  padding: 0 12px;
+}
+.userinfo-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(33,150,243,0.10);
+  padding: 38px 28px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.userinfo-avatar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.userinfo-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+  border: 3px solid #e6f2fd;
+  object-fit: cover;
+}
+.userinfo-main {
+  width: 100%;
+  text-align: center;
+}
+.userinfo-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 4px;
+}
+.userinfo-role {
+  background: #e6f2fd;
+  color: #1976d2;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 4px 16px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.userinfo-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.userinfo-field {
+  display: flex;
+  gap: 10px;
+  font-size: 1.08rem;
+  color: #444;
+  font-weight: 500;
+}
+.userinfo-label {
+  color: #1976d2;
+  font-weight: 600;
+}
+.userinfo-value {
+  color: #222;
+}
+@media (max-width: 600px) {
+  .userinfo-container {
+    max-width: 99vw;
+    padding: 0 2vw;
+  }
+  .userinfo-card {
+    padding: 18px 6px 18px 6px;
+    border-radius: 12px;
+  }
+  .userinfo-avatar {
+    width: 72px;
+    height: 72px;
+  }
+  .userinfo-name {
+    font-size: 1.15rem;
+  }
+}

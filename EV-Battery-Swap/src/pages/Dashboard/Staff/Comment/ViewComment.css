@@ -1,0 +1,109 @@
+/* ==== Page wrapper: đẩy nội dung xuống dưới header cố định ==== */
+.view-comment-page {
+  padding: 96px 24px 32px;           /* top lớn để tránh trùng header */
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f7fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Khung canh lề và max width */
+.vc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề + thanh công cụ (nếu sau này thêm filter) */
+.vc-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+/* Khung scroll ngang để bảng không bị bó hẹp */
+.vc-scroll {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.06);
+  overflow: hidden;               /* bo góc */
+  overflow-x: auto;               /* cho phép scroll ngang khi thiếu chỗ */
+}
+
+/* ==== Table ==== */
+.vc-table {
+  width: 100%;
+  min-width: 1100px;              /* giúp cột rộng rãi hơn */
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;            /* enable ellipsis */
+}
+
+/* Header sticky */
+.vc-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f1f5f9;
+  z-index: 1;
+}
+
+/* Ô bảng */
+.vc-table th,
+.vc-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #0f172a;
+  white-space: nowrap;            /* tránh vỡ dòng lung tung */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Màu header */
+.vc-table th {
+  font-weight: 700;
+  color: #334155;
+}
+
+/* Zebra + hover */
+.vc-table tbody tr:nth-child(odd) { background: #fbfdff; }
+.vc-table tbody tr:hover { background: #eef6ff; }
+
+/* Rộng cột (có thể chỉnh thêm tùy ý) */
+.vc-table th:nth-child(1), .vc-table td:nth-child(1) { width: 110px; } /* Mã Comment */
+.vc-table th:nth-child(2), .vc-table td:nth-child(2) { width: 180px; } /* Tên lái */
+.vc-table th:nth-child(4), .vc-table td:nth-child(4) { width: 180px; } /* Thời gian cmt */
+.vc-table th:nth-child(5), .vc-table td:nth-child(5) { width: 120px; } /* Mã GD */
+.vc-table th:nth-child(6), .vc-table td:nth-child(6) { width: 130px; } /* Trạng thái */
+.vc-table th:nth-child(7), .vc-table td:nth-child(7) { width: 180px; } /* Thời gian đổi */
+
+/* Cột nội dung: cho phép dài nhất, hiển thị … khi tràn */
+.vc-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pill trạng thái */
+.vc-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.vc-status.ok   { background: #dcfce7; color: #15803d; }
+.vc-status.warn { background: #fef3c7; color: #b45309; }
+
+/* State text */
+.vc-loading, .vc-error, .vc-empty {
+  text-align: center;
+  margin-top: 40px;
+  color: #475569;
+}
+
+/* Responsive: thu nhỏ padding chút khi màn nhỏ */
+@media (max-width: 900px) {
+  .view-comment-page { padding-top: 88px; }
+  .vc-table th, .vc-table td { padding: 10px 12px; }
+}

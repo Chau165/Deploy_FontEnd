@@ -1,0 +1,156 @@
+/* Overlay text căn giữa bên trái hình */
+
+/* Header image and welcome text */
+.driver-header-img-wrap {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.driver-header-img {
+  width: 100vw;
+  max-width: 100vw;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 4px 32px rgba(33,150,243,0.08);
+}
+.driver-header-welcome {
+  position: absolute;
+  left: 60px;
+  bottom: 120px;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+  text-align: left;
+  width: max-content;
+  font-family: 'Graphik', 'Arial', sans-serif;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+/* Main layout for station search */
+.driver-main-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+.driver-station-flex {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.driver-station-form-card {
+  min-width: 260px;
+  flex: 0 0 320px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,150,243,0.10);
+  padding: 28px 24px 24px 24px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.driver-station-form-card label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.driver-station-form-card select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e7ef;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+.driver-station-form-card button {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg,#1976d2,#10B981);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.2s;
+}
+.driver-station-form-card button:disabled {
+  background: #bcdffb;
+  color: #fff;
+  cursor: not-allowed;
+}
+.driver-station-form-card .error {
+  color: #e53935;
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+/* Map card: always fill height, no white space */
+.driver-map-card {
+  flex: 1 1 420px;
+  min-width: 340px;
+  height: 440px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(33,150,243,0.10);
+  background: #f8fafc;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+.driver-map-card > div,
+.driver-map-card .mapboxgl-map {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  min-width: 100% !important;
+  border-radius: 0 !important;
+  background: transparent;
+}
+.driver-map-card .mapboxgl-canvas {
+  border-radius: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .driver-station-flex {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .driver-map-card {
+    min-width: 220px;
+    height: 340px;
+  }
+}
+@media (max-width: 600px) {
+  .driver-header-img {
+    height: 180px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+  .driver-header-welcome {
+    left: 18px;
+    bottom: 40px;
+    font-size: 1.2rem;
+  }
+  .driver-main-wrap {
+    padding: 12px 2vw;
+  }
+  .driver-station-form-card {
+    padding: 16px 8px 12px 8px;
+    min-width: 0;
+  }
+  .driver-map-card {
+    min-width: 0;
+    height: 220px;
+    border-radius: 10px;
+  }
+}
